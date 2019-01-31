@@ -5,18 +5,17 @@ public class Kata {
 
         if (chain.isEmpty()) return "";
 
-        String tranformedChain = "";
+        String transformedChain = "";
 
         for (int i = 0; i < chain.length(); i++) {
 
-            tranformedChain += Character.toUpperCase(chain.charAt(i));
+            transformedChain += Character.toUpperCase(chain.charAt(i));
 
-            for (int j = 0; j < i; j++) {
-                tranformedChain += Character.toLowerCase(chain.charAt(i));
-            }
+            for (int j = 0; j < i; j++) transformedChain += Character.toLowerCase(chain.charAt(i));
 
-            if (i < chain.length()-1) tranformedChain += "-";
+            if (i < chain.length()-1) transformedChain += "-";
         }
-        return tranformedChain;
+
+        return transformedChain;
     }
 }
